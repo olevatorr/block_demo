@@ -7,13 +7,13 @@
                 <p class="absolute bottom-0 translate-y-full md:translate-x-[-65px] md:translate-y-0 md:relative z-20">RX7s</p>
             </div>
             <div class="absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-[65%]">
-    <div class="relative z-10 aspect-square md:aspect-[10/7] md:w-[720px] -translate-x-10 -translate-y-1 overflow-hidden">
-      <img :src="currentImage1" alt="" class="object-cover h-full w-full transition-opacity duration-500 ease-in-out">
-    </div>
-    <div class="absolute -top-1/4 -right-6 md:top-[-150px] md:right-[-350px] w-40 md:w-[500px] md:aspect-[10/7] -z-10 overflow-hidden">
-      <img :src="currentImage2" alt="" class="object-cover h-full w-full transition-opacity duration-500 ease-in-out">
-    </div>
-  </div>
+                <div class="relative z-10 aspect-square md:aspect-[10/7] md:w-[720px] -translate-x-10 -translate-y-1 overflow-hidden">
+                <img :src="currentImage1" alt="" class="object-cover h-full w-full">
+                </div>
+                <div class="absolute -top-1/4 -right-6 md:top-[-150px] md:right-[-350px] w-40 md:w-[500px] md:aspect-[10/7] -z-10 overflow-hidden">
+                <img :src="currentImage2" alt="" class="object-cover h-full w-full">
+                </div>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 flex-wrap-reverse md:mt-36 mt-[100%]">
                 <div class="md:px-28 py-6 flex flex-col">
                     <!-- mobile -->
@@ -63,6 +63,6 @@ const swapImages = () => {
 };
 
 onMounted(() => {
-  setInterval(swapImages, 5000); // 每5秒交換一次圖片
+  setInterval(swapImages, 5000);
 });
 </script>
