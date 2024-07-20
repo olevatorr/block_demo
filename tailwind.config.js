@@ -95,6 +95,9 @@ module.exports = {
       borderRadius: {
         'nav': '72px'
       },
+      screens: {
+        '2xl': '1440px',
+      }
     },
   },
   plugins: [],

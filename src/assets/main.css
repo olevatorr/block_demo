@@ -2,6 +2,10 @@
     font-family: "PP Right Didone";
     src: url("./PPRightDidoneNarrowLight.ttf");
 }
+@font-face {
+    font-family: "PP Cirka";
+        src:url("./PPCirka-Variable.ttf");
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,5 +14,8 @@
     html {
         font-family: "PP Cirka";
         background-color: #000;
+    }
+    body {
+        overflow-x: hidden
     }
 }
