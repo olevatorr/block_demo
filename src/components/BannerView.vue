@@ -1,5 +1,5 @@
 <template>
-    <section class="py-14 md:py-28 box-border">
+    <section class="py-14 md:py-28 box-border overflow-hidden">
         <div class="2xl:container mx-auto py-8 px-6 relative">
             <div class="text-red md:text-DDISO text-MDISO grid grid-cols-1 md:grid-cols-2 relative overflow-visible">
                 <p class="text-nowrap md:translate-x-[-65px]">1976--</p>
