@@ -23,12 +23,12 @@ const handleNavClick = (section) => {
             <div class="text-white font-RD md:text-DLOGO text-MLOGO cursor-pointer" @click="handleNavClick('about')">ZOENW</div>
             <div class="flex flex-col items-end justify-between w-12 px-4 py-3.5 rounded-nav md:hidden"
                 @click="toggleNav" :class="isOpen ? 'bg-green' : 'bg-skin'">
-                <div class="w-full h-[1px] transition-all duration-300 ease-in-out"
-                    :class="isOpen ? 'rotate-45 translate-y-[6px] translate-x-[4px] w-[24px] bg-white' : 'bg-black'"></div>
+                <div class="h-[1px] transition-all duration-300 ease-in-out"
+                    :class="isOpen ? 'rotate-45 translate-y-[6px] translate-x-[4px] bg-white w-[24px]' : 'bg-black w-full'"></div>
                 <div class="w-full h-[1px] bg-black transition-all duration-300 ease-in-out"
                     :class="isOpen ? 'hidden' : ''"></div>
-                <div class="w-3/5 h-[1px] transition-all duration-300 ease-in-out origin-left"
-                    :class="isOpen ? 'rotate-[-45deg] translate-y-[3px] bg-white translate-x-[7px] w-[24px]' : 'bg-black'">
+                <div class="h-[1px] transition-all duration-300 ease-in-out origin-left"
+                    :class="isOpen ? 'rotate-[-45deg] translate-y-[3px] bg-white translate-x-[7px] w-[24px]' : 'bg-black w-3/5'">
                 </div>
             </div>
             <div class="flex bg-skin items-center text-DNAV rounded-2xl md:static md:flex-row md:max-h-full md:overflow-visible md:rounded-nav md:px-10 md:py-4 absolute right-6 top-[110%] flex-col gap-5 md:gap-0 overflow-hidden"
