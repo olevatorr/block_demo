@@ -39,7 +39,7 @@ onMounted(() => {
   tl.from(
     sectionImg2.value,
     {
-      x: '-100%',
+      x: '100%',
       y: '100%',
       opacity: 0,
       duration: 3,
