@@ -1,6 +1,6 @@
 <template>
-    <section class="py-28">
-        <div class="2xl:container mx-auto px-16">
+    <section class="py-20 md:py-28 overflow-hidden">
+        <div class="2xl:container mx-auto px-4 md:px-16">
             <SectionOne />
             <SectionTwo />
             <SectionThree />

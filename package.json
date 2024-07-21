@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "gsap": "^3.12.5",
+    "three": "^0.166.1",
     "vue": "^3.4.29"
   },
   "devDependencies": {

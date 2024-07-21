@@ -123,7 +123,9 @@ onMounted(() => {
         },
     });
 
-    tl.add(animateHandPath, 0)
+    tl
+      .from(service.value, { y: '10%', opacity: 0, duration: 1 }, 0)
+      .add(animateHandPath, 0)
       .add(animateFacePath, 0)
 })
 </script>
