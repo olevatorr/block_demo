@@ -1,5 +1,5 @@
 <template>
-  <div ref="container" class="size-40 absolute -left-[10%] -top-[50%] md:-left-40"></div>
+  <div ref="container" class="size-56 absolute -left-[150%] -top-[50%] md:-left-56"></div>
 </template>
 
 <script setup>
@@ -25,9 +25,7 @@ const init = () => {
   renderer.setClearColor(0x000000, 0)
   container.value.appendChild(renderer.domElement)
 
-  isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  )
+  isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || ('ontouchstart' in window)
 
   if (isMobile) {
     window.addEventListener('deviceorientation', handleOrientation)
@@ -45,10 +43,12 @@ const init = () => {
   loadModel()
 }
 
+const objUrl = new URL('/2023F2E-TEST.obj', import.meta.url).href;
+
 const loadModel = () => {
   const loader = new OBJLoader()
   loader.load(
-    `${import.meta.env.BASE_URL}/2023F2E-TEST.obj`,
+    objUrl,
     (object) => {
       model = object
       const box = new THREE.Box3().setFromObject(model)
@@ -101,7 +101,7 @@ const updateSize = () => {
   const distanceY = modelSize.y / (2 * Math.tan((camera.fov * Math.PI) / 360))
   const distance = Math.max(distanceX, distanceY)
 
-  camera.position.z = distance * 1.1 // 給一些額外的空間
+  camera.position.z = distance * 2 // 給一些額外的空間
 
   // 調整模型位置使其垂直居中
   model.position.y = -modelSize.y / 2
@@ -115,19 +115,19 @@ const updateSize = () => {
 
 const animate = () => {
   requestAnimationFrame(animate)
-
-  if (!isMobile && model) {
-    model.rotation.y = mouseX * 0.001
-    model.rotation.x = mouseY * 0.001
-  }
-
   renderer.render(scene, camera)
 }
 
+
+
 const onMouseMove = (event) => {
+  if (!model) return
   const rect = container.value.getBoundingClientRect()
-  mouseX = (event.clientX - rect.left) / rect.width * 2 - 1
+  mouseX = ((event.clientX - rect.left) / rect.width) * 2 - 1
   mouseY = -((event.clientY - rect.top) / rect.height) * 2 + 1
+  
+  model.rotation.y = mouseX * 0.5
+  model.rotation.x = -mouseY * 0.5
 }
 
 const handleOrientation = (event) => {
@@ -163,8 +163,9 @@ const handleTouchMove = (event) => {
 onMounted(() => {
   init()
   animate()
+  updateSize()
   if (!isMobile) {
-    container.value.addEventListener('mousemove', onMouseMove)
+    window.addEventListener('mousemove', onMouseMove)
   }
   
   const resizeObserver = new ResizeObserver(() => {
@@ -174,7 +175,7 @@ onMounted(() => {
 
   onUnmounted(() => {
     if (!isMobile) {
-      container.value.removeEventListener('mousemove', onMouseMove)
+        window.removeEventListener('mousemove', onMouseMove)
     } else {
       window.removeEventListener('deviceorientation', handleOrientation)
       container.value.removeEventListener('touchstart', handleTouchStart)
