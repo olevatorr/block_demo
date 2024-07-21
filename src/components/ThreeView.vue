@@ -48,7 +48,7 @@ const init = () => {
 const loadModel = () => {
   const loader = new OBJLoader()
   loader.load(
-    '../../public/2023F2E-TEST.obj',
+    `${import.meta.env.BASE_URL}/2023F2E-TEST.obj`,
     (object) => {
       model = object
       const box = new THREE.Box3().setFromObject(model)

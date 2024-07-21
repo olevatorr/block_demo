@@ -44,8 +44,8 @@ import ThreeView from '@/components/ThreeView.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const image1Src = '@/../../../public/banner1.png'
-const image2Src = '@/../../../public/banner2.png'
+const image1Src = '../../public/banner1.png'
+const image2Src = '../../public/banner2.png'
 
 const currentImage1 = ref(image1Src)
 const currentImage2 = ref(image2Src)
