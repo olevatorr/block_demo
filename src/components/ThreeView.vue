@@ -1,7 +1,3 @@
-<template>
-  <div ref="container" class="size-56 absolute -left-[150%] -top-[70%] md:-left-56"></div>
-</template>
-
 <script setup>
 import { ref, onMounted, onUnmounted, watchEffect } from 'vue'
 import * as THREE from 'three'
@@ -191,3 +187,6 @@ watchEffect(() => {
   }
 })
 </script>
+<template>
+  <div ref="container" class="size-56 absolute -left-[150%] -top-[70%] md:-left-56"></div>
+</template>

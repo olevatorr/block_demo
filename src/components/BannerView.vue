@@ -1,78 +1,3 @@
-<template>
-  <section class="py-14 md:py-28 overflow-hidden" ref="sectionRef">
-    <div class="2xl:container mx-auto py-8 px-6 relative">
-      <div class="grid grid-cols-12 grid-flow-row">
-        <p
-          ref="text1"
-          class="text-red md:text-DDISO text-MDISO text-nowrap md:translate-x-[-60px] col-start-1 col-span-6 md:col-span-6 md:row-start-1 row-start-1"
-        >
-          1976--
-        </p>
-        <p
-          ref="text2"
-          class="text-red md:text-DDISO text-MDISO relative col-start-1 col-span-12 md:row-start-1 md:col-start-7 md:col-span-6 row-start-2 md:z-10 md:-ms-14"
-        >
-          Mazda
-        </p>
-        <p
-          ref="text3"
-          class="text-red md:text-DDISO text-MDISO md:translate-x-[-60px] col-start-1 col-span-12 md:row-start-2 md:col-start-1 md:col-span-6 md:translate-y-0 md:relative z-30 row-start-3"
-        >
-          RX7s
-        </p>
-        <div
-          ref="image1"
-          class="row-start-3 col-start-1 col-span-12 md:row-start-2 md:col-start-4 md:col-span-7 relative md:-translate-y-72 md:-mb-64 -translate-x-14 -translate-y-1 z-10 md:z-20 md:-translate-x-4"
-        >
-          <img
-            :src="currentImage1"
-            alt=""
-            ref="image1Ref"
-            class="object-cover w-full aspect-square md:aspect-[10/7]"
-          />
-        </div>
-        <div
-          ref="image2"
-          class="row-start-1 col-start-6 col-span-7 md:col-start-9 md:col-span-4 relative"
-        >
-          <img
-            :src="currentImage2"
-            alt=""
-            ref="image2Ref"
-            class="object-cover w-full aspect-[10/8] absolute md:static translate-x-20 md:translate-x-0 md:-translate-y-8"
-          />
-        </div>
-        <div
-          ref="content"
-          class="row-start-4 col-span-12 md:row-start-3 md:col-span-12 grid grid-cols-1 md:grid-cols-2 flex-wrap-reverse md:mt-0"
-        >
-          <div class="md:px-28 py-6 flex flex-col">
-            <p ref="mobileMovie" class="text-red text-MDISO text-right md:hidden">Movie</p>
-            <p ref="description" class="text-skin text-DB2 mb-10 flex">
-              Sit elit incididunt Lorem minim ea pariatur anim dolor ut veniam amet ad. Ipsum tempor
-              commodo ullamco Lorem incididunt proidtation ea esse velit tempor culpa.
-            </p>
-            <div class="flex md:items-start md:gap-x-6 self-end items-center gap-x-3 relative">
-              <div
-                class="size-DB border border-skin rounded-full relative overflow-hidden scale-75 md:scale-100"
-              >
-                <svg class="size-DB activer:bg-green hover:bg-green duration-300 cursor-pointer">
-                  <line x1="20" y1="35" x2="43" y2="28" class="stroke-1 stroke-skin" />
-                  <line x1="43" y1="28" x2="35" y2="23" class="stroke-1 stroke-skin" />
-                </svg>
-              </div>
-              <div class="text-DH1 text-skin hidden md:block">View All</div>
-              <div class="text-DB2 text-skin md:hidden">View Detail</div>
-              <ThreeView />
-            </div>
-          </div>
-          <p ref="desktopMovie" class="text-red md:text-DDISO text-MDISO hidden md:block">Movie</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</template>
-
 <script setup>
 import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
@@ -193,47 +118,121 @@ onMounted(() => {
   })
 })
 </script>
-
-<!-- <template>
-    <section class="py-14 md:py-28 box-border overflow-hidden">
-        <div class="2xl:container mx-auto py-8 px-6 relative">
-            <div class="text-red md:text-DDISO text-MDISO grid grid-cols-1 md:grid-cols-2 relative overflow-visible">
-                <p class="text-nowrap md:translate-x-[-65px]">1976--</p>
-                <p class="relative">Mazda</p>
-                <p class="absolute bottom-0 translate-y-full md:translate-x-[-65px] md:translate-y-0 md:relative z-20">RX7s</p>
+<template>
+  <section class="py-14 xl:py-28 overflow-hidden" ref="sectionRef">
+    <div class="2xl:container mx-auto py-8 px-6 relative">
+      <div class="grid grid-cols-12 grid-flow-row">
+        <p
+          ref="text1"
+          class="text-red xl:text-DDISO text-MDISO text-nowrap xl:translate-x-[-60px] col-start-1 col-span-6 xl:col-span-6 xl:row-start-1 row-start-1"
+        >
+          1976--
+        </p>
+        <p
+          ref="text2"
+          class="text-red xl:text-DDISO text-MDISO relative col-start-1 col-span-12 xl:row-start-1 xl:col-start-7 xl:col-span-6 row-start-2 xl:z-10 xl:-ms-14"
+        >
+          Mazda
+        </p>
+        <p
+          ref="text3"
+          class="text-red xl:text-DDISO text-MDISO xl:translate-x-[-60px] col-start-1 col-span-12 xl:row-start-2 xl:col-start-1 xl:col-span-6 xl:translate-y-0 xl:relative z-30 row-start-3"
+        >
+          RX7s
+        </p>
+        <div
+          ref="image1"
+          class="row-start-3 col-start-1 col-span-12 xl:row-start-2 xl:col-start-4 xl:col-span-7 relative xl:-translate-y-72 xl:-mb-64 -translate-x-14 -translate-y-1 z-10 xl:z-20 xl:-translate-x-4"
+        >
+          <img
+            :src="currentImage1"
+            alt=""
+            ref="image1Ref"
+            class="object-cover w-full aspect-square xl:aspect-[10/7]"
+          />
+        </div>
+        <div
+          ref="image2"
+          class="row-start-1 col-start-6 col-span-7 xl:col-start-9 xl:col-span-4 relative"
+        >
+          <img
+            :src="currentImage2"
+            alt=""
+            ref="image2Ref"
+            class="object-cover w-full aspect-[10/8] absolute xl:static translate-x-20 xl:translate-x-0 xl:-translate-y-8"
+          />
+        </div>
+        <div
+          ref="content"
+          class="row-start-4 col-span-12 xl:row-start-3 xl:col-span-12 grid grid-cols-1 xl:grid-cols-2 flex-wrap-reverse xl:mt-0"
+        >
+          <div class="xl:px-28 py-6 flex flex-col">
+            <p ref="mobileMovie" class="text-red text-MDISO text-right xl:hidden">Movie</p>
+            <p ref="description" class="text-skin text-DB2 mb-10 flex">
+              Sit elit incididunt Lorem minim ea pariatur anim dolor ut veniam amet ad. Ipsum tempor
+              commodo ullamco Lorem incididunt proidtation ea esse velit tempor culpa.
+            </p>
+            <div class="flex xl:items-start xl:gap-x-6 self-end items-center gap-x-3 relative">
+              <div
+                class="size-DB border border-skin rounded-full relative overflow-hidden scale-75 xl:scale-100"
+              >
+                <svg class="size-DB activer:bg-green hover:bg-green duration-300 cursor-pointer">
+                  <line x1="20" y1="35" x2="43" y2="28" class="stroke-1 stroke-skin" />
+                  <line x1="43" y1="28" x2="35" y2="23" class="stroke-1 stroke-skin" />
+                </svg>
+              </div>
+              <div class="text-DH1 text-skin hidden xl:block">View All</div>
+              <div class="text-DB2 text-skin xl:hidden">View Detail</div>
+              <ThreeView />
             </div>
-            <div class="absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-[65%]">
-                <div class="relative z-10 aspect-square md:aspect-[10/7] md:w-[720px] -translate-x-10 -translate-y-1 overflow-hidden">
+          </div>
+          <p ref="desktopMovie" class="text-red xl:text-DDISO text-MDISO hidden xl:block">Movie</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<!-- <template> 修改之前
+    <section class="py-14 xl:py-28 box-border overflow-hidden">
+        <div class="2xl:container mx-auto py-8 px-6 relative">
+            <div class="text-red xl:text-DDISO text-MDISO grid grid-cols-1 xl:grid-cols-2 relative overflow-visible">
+                <p class="text-nowrap xl:translate-x-[-65px]">1976--</p>
+                <p class="relative">Mazda</p>
+                <p class="absolute bottom-0 translate-y-full xl:translate-x-[-65px] xl:translate-y-0 xl:relative z-20">RX7s</p>
+            </div>
+            <div class="absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-[65%]">
+                <div class="relative z-10 aspect-square xl:aspect-[10/7] xl:w-[720px] -translate-x-10 -translate-y-1 overflow-hidden">
                 <img :src="currentImage1" alt="" class="object-cover h-full w-full">
                 </div>
-                <div class="absolute -top-1/4 -right-6 md:top-[-150px] md:right-[-350px] w-40 md:w-[500px] md:aspect-[10/7] -z-10 overflow-hidden">
+                <div class="absolute -top-1/4 -right-6 xl:top-[-150px] xl:right-[-350px] w-40 xl:w-[500px] xl:aspect-[10/7] -z-10 overflow-hidden">
                 <img :src="currentImage2" alt="" class="object-cover h-full w-full">
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 flex-wrap-reverse md:mt-36 mt-[100%]">
-                <div class="md:px-28 py-6 flex flex-col">
-                    <p class="text-red text-MDISO text-right md:hidden">
+            <div class="grid grid-cols-1 xl:grid-cols-2 flex-wrap-reverse xl:mt-36 mt-[100%]">
+                <div class="xl:px-28 py-6 flex flex-col">
+                    <p class="text-red text-MDISO text-right xl:hidden">
                     Movie
                     </p>
                     <p class="text-skin text-DB2 mb-10 flex">
                         Sit elit incididunt Lorem minim ea pariatur anim dolor ut veniam amet ad. Ipsum tempor commodo ullamco Lorem incididunt proidtation ea esse velit tempor culpa. 
                     </p>
-                    <div class="flex  md:items-start md:gap-x-6 self-end items-center gap-x-3">
-                        <div class="size-DB border border-skin rounded-full relative overflow-hidden scale-75 md:scale-100">
+                    <div class="flex  xl:items-start xl:gap-x-6 self-end items-center gap-x-3">
+                        <div class="size-DB border border-skin rounded-full relative overflow-hidden scale-75 xl:scale-100">
                             <svg class="size-DB activer:bg-green hover:bg-green duration-300 cursor-pointer">
                                 <line x1="20" y1="35" x2="43" y2="28" class="stroke-1 stroke-skin"/>
                                 <line x1="43" y1="28" x2="35" y2="23" class="stroke-1 stroke-skin"/>
                             </svg>
                         </div>
-                        <div class=" text-DH1 text-skin hidden md:block">
+                        <div class=" text-DH1 text-skin hidden xl:block">
                             View All
                         </div>
-                        <div class="text-DB2 text-skin md:hidden">
+                        <div class="text-DB2 text-skin xl:hidden">
                             View Detail
                         </div>
                     </div>
                 </div>
-                <p class="text-red md:text-DDISO text-MDISO hidden md:block">
+                <p class="text-red xl:text-DDISO text-MDISO hidden xl:block">
                     Movie
                 </p>
             </div>

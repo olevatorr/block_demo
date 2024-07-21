@@ -1,20 +1,3 @@
-<template>
-    <section class="overflow-hidden pt-3 md:pt-10" ref="divRef">
-        <div class="2xl:container md:px-16 mx-auto">
-            <div class="grid grid-cols-12 grid-flow-row gap-y-10">
-                <div class="col-span-12 h-28 md:h-auto relative">
-                    <h2 class="text-skin text-center text-MDIS1 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:left-0 md:text-DDIS1" ref="title">Contact</h2>
-                </div>
-                <p class="font-RD text-red text-center text-DH2 col-span-12 md:mb-14 md:mt-6" ref="telNum">+339 566 789</p>
-                <div class="hidden md:block size-[264px] rounded-full mix-blend-difference bg-white col-start-3 row-start-3 row-span-1 -translate-y-[40%]" ref="blendDiv"></div>
-                <img src="../../public/contact.png" alt="" class="col-start-1 col-span-12 row-start-3 row-span-1 aspect-[8/10] object-cover md:aspect-auto" ref="banner">
-                <p class="text-skin text-MDIS1 ms-4 -mb-7 row-start-3 col-start-4 md:-mb-14 md:ms-0 md:text-DDIS1 self-end row-span-1 md:col-start-9 md:col-span-4" ref="call">CALL</p>
-                <p class="text-skin text-MDIS1 order-last -translate-x-8 -mb-7 md:order-none md:text-DDIS1 md:col-span-4 md:-mb-14 md:-translate-x-20" ref="me">ME</p>
-                <p class="text-skin text-DB2 m-6 col-span-12 md:m-0 md:col-start-5 md:col-span-5 text-center" ref="text">Sit elit incididunt Lorem minim ea pariatur anim dolor ut veniam amet ad. Ipsum tempor commodo ullamco Lorem incididunt proident nisi nostrud dolore. Et labore minim laboris esse amet eu eu exercitation ea esse velit tempor culpa.</p>
-            </div>
-        </div>
-    </section>
-</template>
 <script setup>
 import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
@@ -111,3 +94,20 @@ onMounted(() => {
 
 })
 </script>
+<template>
+    <section class="overflow-hidden pt-3 md:pt-10" ref="divRef">
+        <div class="2xl:container md:px-16 mx-auto">
+            <div class="grid grid-cols-12 grid-flow-row gap-y-10">
+                <div class="col-span-12 h-28 md:h-auto relative">
+                    <h2 class="text-skin text-center text-MDIS1 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:left-0 md:text-DDIS1" ref="title">Contact</h2>
+                </div>
+                <p class="font-RD text-red text-center text-DH2 col-span-12 md:mb-14 md:mt-6" ref="telNum">+339 566 789</p>
+                <div class="hidden md:block size-[264px] rounded-full mix-blend-difference bg-white col-start-3 row-start-3 row-span-1 -translate-y-[40%]" ref="blendDiv"></div>
+                <img src="../../public/contact.png" alt="" class="col-start-1 col-span-12 row-start-3 row-span-1 aspect-[8/10] object-cover md:aspect-auto" ref="banner">
+                <p class="text-skin text-MDIS1 ms-4 -mb-7 row-start-3 col-start-4 md:-mb-14 md:ms-0 md:text-DDIS1 self-end row-span-1 md:col-start-9 md:col-span-4" ref="call">CALL</p>
+                <p class="text-skin text-MDIS1 order-last -translate-x-8 -mb-7 md:order-none md:text-DDIS1 md:col-span-4 md:-mb-14 md:-translate-x-20" ref="me">ME</p>
+                <p class="text-skin text-DB2 m-6 col-span-12 md:m-0 md:col-start-5 md:col-span-5 text-center" ref="text">Sit elit incididunt Lorem minim ea pariatur anim dolor ut veniam amet ad. Ipsum tempor commodo ullamco Lorem incididunt proident nisi nostrud dolore. Et labore minim laboris esse amet eu eu exercitation ea esse velit tempor culpa.</p>
+            </div>
+        </div>
+    </section>
+</template>

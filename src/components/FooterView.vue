@@ -1,3 +1,10 @@
+<script setup>
+const emit = defineEmits(['scrollTo'])
+
+const handleNavClick = (section) => {
+    emit('scrollTo', section)
+}
+</script>
 <template>
     <footer class="grid bg-skin text-red py-5 md:py-10 md:grid-cols-3 text-center items-center">
         <div class="flex justify-center gap-x-6">
@@ -8,10 +15,3 @@
         <p>&copy original COSME JAPAN CO.,LTD</p>
     </footer>
 </template>
-<script setup>
-const emit = defineEmits(['scrollTo'])
-
-const handleNavClick = (section) => {
-    emit('scrollTo', section)
-}
-</script>

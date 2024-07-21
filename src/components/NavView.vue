@@ -16,7 +16,6 @@ const handleNavClick = (section) => {
     }
 }
 </script>
-
 <template>
     <header class="w-full fixed top-0 left-0 z-50">
         <nav class="mx-auto md:px-12 px-6 md:pt-8 pt-4 2xl:container flex justify-between relative">
