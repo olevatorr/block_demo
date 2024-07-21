@@ -4,25 +4,25 @@
       <div class="grid grid-cols-12 grid-flow-row">
         <p
           ref="text1"
-          class="text-red md:text-DDISO text-MDISO text-nowrap md:translate-x-[-40px] col-start-1 col-span-6 md:col-span-6 md:row-start-1 row-start-1"
+          class="text-red md:text-DDISO text-MDISO text-nowrap md:translate-x-[-60px] col-start-1 col-span-6 md:col-span-6 md:row-start-1 row-start-1"
         >
           1976--
         </p>
         <p
           ref="text2"
-          class="text-red md:text-DDISO text-MDISO relative col-start-1 col-span-12 md:row-start-1 md:col-start-7 md:col-span-6 row-start-2 md:z-10"
+          class="text-red md:text-DDISO text-MDISO relative col-start-1 col-span-12 md:row-start-1 md:col-start-7 md:col-span-6 row-start-2 md:z-10 md:-ms-14"
         >
           Mazda
         </p>
         <p
           ref="text3"
-          class="text-red md:text-DDISO text-MDISO md:translate-x-[-40px] col-start-1 col-span-12 md:row-start-2 md:col-start-1 md:col-span-6 md:translate-y-0 md:relative z-30 row-start-3"
+          class="text-red md:text-DDISO text-MDISO md:translate-x-[-60px] col-start-1 col-span-12 md:row-start-2 md:col-start-1 md:col-span-6 md:translate-y-0 md:relative z-30 row-start-3"
         >
           RX7s
         </p>
         <div
           ref="image1"
-          class="row-start-3 col-start-1 col-span-12 md:row-start-2 md:col-start-4 md:col-span-7 relative md:-translate-y-40 md:-mb-64 -translate-x-14 -translate-y-1 z-10 md:z-20"
+          class="row-start-3 col-start-1 col-span-12 md:row-start-2 md:col-start-4 md:col-span-7 relative md:-translate-y-72 md:-mb-64 -translate-x-14 -translate-y-1 z-10 md:z-20 md:-translate-x-4"
         >
           <img
             :src="currentImage1"
@@ -44,7 +44,7 @@
         </div>
         <div
           ref="content"
-          class="row-start-4 col-span-12 md:row-start-3 md:col-span-12 grid grid-cols-1 md:grid-cols-2 flex-wrap-reverse md:mt-36"
+          class="row-start-4 col-span-12 md:row-start-3 md:col-span-12 grid grid-cols-1 md:grid-cols-2 flex-wrap-reverse md:mt-0"
         >
           <div class="md:px-28 py-6 flex flex-col">
             <p ref="mobileMovie" class="text-red text-MDISO text-right md:hidden">Movie</p>

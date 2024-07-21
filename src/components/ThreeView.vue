@@ -1,5 +1,5 @@
 <template>
-  <div ref="container" class="size-56 absolute -left-[150%] -top-[50%] md:-left-56"></div>
+  <div ref="container" class="size-56 absolute -left-[150%] -top-[70%] md:-left-56"></div>
 </template>
 
 <script setup>
