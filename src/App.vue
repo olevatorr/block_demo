@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import NavView from './components/NavView.vue'
 import BannerView from './components/BannerView.vue'
 import StoryView from './components/StoryView.vue'
@@ -8,11 +8,13 @@ import MarqueeView from './components/MarqueeView.vue'
 import GalleryView from './components/GalleryView.vue'
 import CallMeView from './components/CallMeView.vue'
 import FooterView from './components/FooterView.vue'
+import LoaddingView from './components/LoaddingView.vue'
 
 const aboutRef = ref(null)
 const storyRef = ref(null)
 const galleryRef = ref(null)
 const contactRef = ref(null)
+const count = ref(0)
 
 const scrollTo = (section) => {
   const refMap = {
@@ -28,15 +30,28 @@ const scrollTo = (section) => {
     element.scrollIntoView({ behavior: 'smooth' })
   }
 }
+
+onMounted(()=>{
+  const loadding = setInterval(() => {
+    if(count.value < 3) {
+      count.value ++
+    } else {
+      clearInterval(loadding)
+    }
+  }, 1000);
+})
 </script>
 
 <template>
-  <NavView @scrollTo="scrollTo" />
-  <BannerView ref="aboutRef" />
-  <StoryView ref="storyRef" />
-  <ServiceView />
-  <MarqueeView />
-  <GalleryView ref="galleryRef" />
-  <CallMeView ref="contactRef" />
-  <FooterView @scrollTo="scrollTo"/>
+  <LoaddingView v-if="count < 3"/>
+  <div v-else>
+    <NavView @scrollTo="scrollTo" />
+    <BannerView ref="aboutRef" />
+    <StoryView ref="storyRef" />
+    <ServiceView />
+    <MarqueeView />
+    <GalleryView ref="galleryRef" />
+    <CallMeView ref="contactRef" />
+    <FooterView @scrollTo="scrollTo"/>
+  </div>
 </template>

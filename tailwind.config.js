@@ -97,6 +97,15 @@ module.exports = {
       },
       screens: {
         '2xl': '1440px',
+      },
+      keyframes: {
+        loadding: {
+          '0%': { width: '0%' },
+          '30%': { width: '60%' },
+          '70%': { width: '80%' },
+          '90%': { width: '90%' },
+          '100%': { width: '100%' },
+        }
       }
     },
   },
